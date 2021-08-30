@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVRL | Chirag</title>
+</head>
+<body>
+    <div class="app">
+        <div class="container-top">
+          <div class="bar" id="bar1" name="hi"></div>
+          <div class="bar" id="bar2" name="hi"></div>
+          <div class="bar" id="bar3" name="hi"></div>
+          <div class="bar" id="bar4" name="hi"></div>
+          <div class="bar" id="bar5" name="hi"></div>
+        </div>
+          <div class="container-bottom">
+          <button class="btn btn-start" onclick="aniStart()">Start</button>
+            <button class="btn btn-stop" onclick="aniEnd()">Stop</button>
+        </div>
+        <div id="footer" style="text-align:center; font-size: 0.8em; transform: translateY(35vh);">Made with ❤️ by <a target ="_blank"href="https://chiragmodi.netlify.app/">Chirag</a></div>
+      </div>
+
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        
+        html {
+          font-family: 'Open Sans', sans-serif;
+        }
+        .app {
+          margin: 80px auto;
+        }
+        .container-top {
+          display: flex;
+          flex-direction: row;
+          background-color: black;
+          width: 630px;
+          height: 27vh;
+          border: 12px solid black;
+          margin: auto;
+          position: relative;
+        }
+        .bar {
+          height: 100%;
+          width: 100%;
+          background-color: red;
+          position: absolute;
+        }
+        #bar1 {
+            background-color: rgba(121,83,189,255);
+            width: 20%;
+            top: 0%;
+            left: 0%;
+            animation-iteration-count: infinite;
+        }
+        #bar2 {
+            background-color: rgba(209,82,169,255);
+            width: 20%;
+            top: 0%;
+            left: 20%;
+        }
+        #bar3 {
+            background-color: rgba(254,100,134,255);
+            width: 20%;
+            top: 0%;
+            left: 40%;
+        }
+        #bar4 {
+            background-color: rgba(255,138,103,255);
+            width: 20%;
+            top: 0%;
+            left: 60%;
+        }
+        #bar5 {
+            background-color: rgba(255,190,86,255);
+            width: 20%;
+            top: 0%;
+            left: 80%;
+        }
+        .bar1Animation {
+            animation: animateBar1 8s infinite;
+            animation-play-state: running;
+        }
+        .bar2Animation {
+            animation: animateBar2 8s infinite;
+            animation-play-state: running;
+        }
+        .bar3Animation {
+            animation: animateBar3 8s infinite;
+            animation-play-state: running;
+        }
+        .bar4Animation {
+            animation: animateBar4 8s infinite;
+            animation-play-state: running;
+        }
+        .bar5Animation {
+            animation: animateBar5 8s infinite;
+            animation-play-state: running;
+        }
+        @keyframes animateBar1 {
+            0% {height: 100%; top: 0%;}
+            10% {height: 10%; top: 90%;}
+            25% {height: 60%; top: 40%;}
+            40% {height: 90%; top: 10%;}
+            55% {height: 30%; top: 70%;}
+            70% {height: 5%; top: 95%;}
+            85% {height: 45%; top: 55%;}
+            100% {height: 100%; top: 0%;}
+        }
+        @keyframes animateBar2 {
+            0% {height: 100%; top: 0%;}
+            10% {height: 90%; top: 10%;}
+            25% {height: 5%; top: 95%;}
+            40% {height: 10%; top: 90%;}
+            55% {height: 20%; top: 80%;}
+            70% {height: 60%; top: 40%;}
+            85% {height: 75%; top: 25%;}
+            100% {height: 100%; top: 0%;}
+        }
+        @keyframes animateBar3 {
+            0% {height: 100%; top: 0%;}
+            10% {height: 45%; top: 55%;}
+            25% {height: 60%; top: 40%;}
+            40% {height: 10%; top: 90%;}
+            55% {height: 90%; top: 10%;}
+            70% {height: 5%; top: 95%;}
+            85% {height: 60%; top: 40%;}
+            100% {height: 100%; top: 0%;}
+        }
+        @keyframes animateBar4 {
+            0% {height: 100%; top: 0%;}
+            10% {height: 10%; top: 90%;}
+            25% {height: 45%; top: 55%;}
+            40% {height: 90%; top: 10%;}
+            55% {height: 60%; top: 40%;}
+            70% {height: 5%; top: 95%;}
+            85% {height: 30%; top: 70%;}
+            100% {height: 100%; top: 0%;}
+        }
+        @keyframes animateBar5 {
+            0% {height: 100%; top: 0%;}
+            10% {height: 5%; top: 95%;}
+            25% {height: 90%; top: 10%;}
+            40% {height: 10%; top: 90%;}
+            55% {height: 50%; top: 50%;}
+            70% {height: 60%; top: 40%;}
+            85% {height: 45%; top: 55%;}
+            100% {height: 100%; top: 0%;}
+        }
+        .container-bottom {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 600px;
+          padding: 30px 12px;
+          margin: auto;
+        }
+        .btn {
+            width: 90px;
+            padding: 5px 0;
+            cursor: pointer;
+            outline: none;
+            border: none;
+            color: white;
+        }
+        .btn:hover {
+            opacity: 0.8;
+            outline: 1.6px solid black;
+        }
+        .btn-start {
+            background-color: green;
+        }
+        .btn-stop {
+            background-color: red;
+        }
+        .aniStop{
+            animation-play-state: paused;
+        }
+        </style>
+
+
+<script type="text/javascript">
+    function aniStart(){
+    document.getElementById("bar1").classList.add("bar1Animation");
+    document.getElementById("bar2").classList.add("bar2Animation");
+    document.getElementById("bar3").classList.add("bar3Animation");
+    document.getElementById("bar4").classList.add("bar4Animation");
+    document.getElementById("bar5").classList.add("bar5Animation");
+
+    document.getElementById("bar1").classList.remove("aniStop");
+    document.getElementById("bar2").classList.remove("aniStop");
+    document.getElementById("bar3").classList.remove("aniStop");
+    document.getElementById("bar4").classList.remove("aniStop");
+    document.getElementById("bar5").classList.remove("aniStop");
+  }
+  function aniEnd(){
+    document.getElementById("bar1").classList.add("aniStop");
+    document.getElementById("bar2").classList.add("aniStop");
+    document.getElementById("bar3").classList.add("aniStop");
+    document.getElementById("bar4").classList.add("aniStop");
+    document.getElementById("bar5").classList.add("aniStop");
+  }
+</script> 
+</body>
+</html>
